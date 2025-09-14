@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>lab1_form</title>
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <h1>Лабораторна робота №1</h1>
+        <h2>Робота з формами</h2>
+        <h2>Виконав студент КН-31 Яцків Максим Дмитрович</h2>
+        <a href="page1.html"> Поверення на головну сторінку</a><br><br>
+
+        <h3>Завдання</h3>
+        <p>5. Необхідно розробити форму для введення інформації про фільм до БД фільмів. Необхідно заповнити наступні данні: </p>
+
+        <ul>
+            <li>
+                дані про фільм, включають назву фільму, жанр(вибирається зі списку), дату виходу на екрани, опис фільму, картинку з афішою;
+            </li>
+            <li>
+                дані про режисера, включають ПІБ, дату народження, біографію, посилання на веб-сайт.
+            </li>
+        </ul>
+
+    <h4>Форма для додавання фільму</h4>
+    <form action="/create-movie" method="post" style="width: fit-content">
+        <fieldset >
+            <legend>Дані про фільм</legend>
+
+            <label for="title">Назва фільму:</label>
+            <input type="text" id="title" name="title" required>
+
+            <label for="genre">Жанр:</label>
+            <select id="genre" name="genre" required>
+                <option>-- Оберіть жанр --</option>
+                <option>Драма</option>
+                <option>Комедія</option>
+                <option>Бойовик</option>
+                <option>Трилер</option>
+                <option>Фентезі</option>
+            </select>
+
+            <label for="release">Дата виходу:</label>
+            <input type="date" id="release" name="release" required><br><br>
+
+            <label for="description">Опис:</label><br>
+            <textarea id="description" name="description" rows="4" cols="50"></textarea><br><br>
+
+            <label for="poster">Афіша (картинка):</label><br>
+            <input type="file" id="poster" name="poster" ><br><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Дані про режисера</legend>
+
+            <label for="director">ПІБ:</label>
+            <input type="text" id="director" name="director" required>
+
+            <label for="dob">Дата народження:</label>
+            <input type="date" id="dob" name="dob"><br><br>
+
+            <label for="bio">Біографія:</label><br>
+            <textarea id="bio" name="bio" rows="4" cols="50"></textarea><br><br>
+
+            <label for="website">Веб-сайт:</label><br>
+            <input type="url" id="website" name="website"><br><br>
+        </fieldset>
+
+        <input type="submit" value="Зберегти">
+    </form>
+
+    </body>
+</html>
